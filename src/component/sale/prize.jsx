@@ -98,7 +98,7 @@ class SelectForm extends React.Component{
 	            	<FormItem
 		            label="奖品类别："
 		            id="prizeType">
-		            	<Select size="large" placeholder="请选择奖品类别" style={{width: 140}} name="prizeType"  value={this.state.prizeType} onChange={this.onChange.bind(this,'prizeType')}>
+		            	<Select size="large" placeholder="请选择奖品类别" style={{width: 80}} name="prizeType"  value={this.state.prizeType} onChange={this.onChange.bind(this,'prizeType')}>
 		                    <Option value="prize-type-1">类别1</Option>
 		                    <Option value="prize-type-2">类别2</Option>
 		                    <Option value="prize-type-3">类别3</Option>
@@ -171,59 +171,43 @@ const columns = [{
   key: 'size'
 },{
   title: '单位',
+  dataIndex: 'unit',
+  key: 'unit'
+},{
+  title: '奖品类别',
+  dataIndex: 'prizeType',
+  key: 'prizeType'
+}, {
+  title: '入网日期',
   dataIndex: 'createTime',
   key: 'createTime'
-}, {
+},{
   title: '操作',
   key: 'operation',
   render: function(text, record) {
-  	var edit = '/sale/user/edit/'+record.No,
-  		del = '/sale/user/del/' + record.No
+  	var edit = '/sale/prize/edit/'+record.No,
+  		del = '/sale/prize/del/' + record.No
     return <span><Link to={edit}>编辑</Link><span className="ant-divider"></span><a href="#" onClick={showModal} data-id={record.No} data-text="删除" >删除</a></span>;
 	}
 }];
 const data = [{
   key: '1',
   No: '000001',
-  userName: '李楠',
-  mobile : 13661111111,
+  prizeName: '移动5元充值卡',
+  productName : '移动',
+  size : '250ml',
+  unit : '张',
+  prizeType : '话费',
   createTime : '2015-10-10 10:30',
-  email : 'ryw@163.com'
 }, {
   key: '2',
   No: '000002',
-  userName: '李楠',
-  mobile : 13661111111,
+  prizeName: '移动15元充值卡',
+  productName : '移动',
+  size : '',
+  unit : '张',
+  prizeType : '话费',
   createTime : '2015-10-10 10:30',
-  email : 'ryw@163.com'
-}, {
-  key: '3',
-  No: '000003',
-  userName: '李楠',
-  mobile : 13661111111,
-  createTime : '2015-10-10 10:30',
-  email : 'ryw@163.com'
-}, {
-  key: '4',
-  No: '000004',
-  userName: '李楠',
-  mobile : 13661111111,
-  createTime : '2015-10-10 10:30',
-  email : 'ryw@163.com'
-}, {
-  key: '5',
-  No: '000005',
-  userName: '李楠',
-  mobile : 13661111111,
-  createTime : '2015-10-10 10:30',
-  email : 'ryw@163.com'
-}, {
-  key: '6',
-  No: '000006',
-  userName: '李楠',
-  mobile : 13661111111,
-  createTime : '2015-10-10 10:30',
-  email : 'ryw@163.com'
 }];
 
 
@@ -285,12 +269,17 @@ class SalePrize extends React.Component{
 		return(
 			<div className="m-list">
 				<Row>
-					<Col span="3">
-						<Link to='/sale/user/add'>
+					<Col span="2">
+						<Link to='/sale/prize/add'>
 							<Button type="primary" size="large"><Icon type="plus" /><span>新增</span></Button>
 	          			</Link>
+	          		</Col>
+	          		<Col span="2">
+	          			<Link to='/sale/prize/exports'>
+							<Button type="primary" size="large"><span>导出报表</span></Button>
+	          			</Link>
 					</Col>
-					<Col span="21">
+					<Col span="20">
 						<SelectForm />
 					</Col>
 				</Row>
