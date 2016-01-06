@@ -293,7 +293,7 @@ class SalePrize extends React.Component{
           <p>{this.state.ModalText}</p>
         </Modal>
 			</div>
-
+      )
 	}
 }
 module.exports = {

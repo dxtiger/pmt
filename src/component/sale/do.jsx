@@ -355,7 +355,7 @@ class SaleDo extends React.Component{
           <p>{this.state.ModalText}</p>
         </Modal>
 			</div>
-
+    )
 	}
 	
 }
