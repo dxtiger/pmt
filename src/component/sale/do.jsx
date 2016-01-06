@@ -255,7 +255,6 @@ const data = [{
 
 
 
-
 class SaleDo extends React.Component{
 	constructor(){
 		super();
