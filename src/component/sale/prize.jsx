@@ -215,7 +215,6 @@ const data = [{
 
 
 
-
 class SalePrize extends React.Component{
 	constructor(){
 		super();
@@ -294,7 +293,7 @@ class SalePrize extends React.Component{
           <p>{this.state.ModalText}</p>
         </Modal>
 			</div>
-		)
+
 	}
 }
 module.exports = {

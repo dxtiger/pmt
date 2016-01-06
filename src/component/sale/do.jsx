@@ -256,9 +256,6 @@ const data = [{
 
 
 
-
-
-
 class SaleDo extends React.Component{
 	constructor(){
 		super();
@@ -358,8 +355,9 @@ class SaleDo extends React.Component{
           <p>{this.state.ModalText}</p>
         </Modal>
 			</div>
-		)
+
 	}
+	
 }
 module.exports = {
 	SaleDo : SaleDo

@@ -1,4 +1,4 @@
-ml
+*.iml
 .idea/
 .ipr
 .iws
@@ -18,4 +18,3 @@ Thumbs.db
 *.pyo
 node_modules
 dist
-

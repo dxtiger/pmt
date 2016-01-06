@@ -23,11 +23,13 @@ import { RuleArea } from '../component/rules/area';
 import { RuleNumber } from '../component/rules/number';
 
 import { SaleDo } from '../component/sale/do';
+
 import { SaleDoAdd } from '../component/sale/do-add';
 
 
 import { SalePrize } from '../component/sale/prize';
 import { SalePrizeAdd } from '../component/sale/prize-add';
+
 
 
 
@@ -89,6 +91,7 @@ const Router = (
 		<Route path="/sale/prize" component={SalePrize}></Route>
 		<Route path="/sale/prize/add" component={SalePrizeAdd}></Route>
 		<Route path="/sale/prize/edit/:id" component={SalePrizeAdd}></Route>
+
 
 		<Route path="/sale/user" component={SaleUser}></Route>
 		<Route path="/sale/user/info/:id" component={SaleUserInfo}></Route>
